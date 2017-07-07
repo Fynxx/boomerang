@@ -5,10 +5,10 @@ using UnityEngine;
 public class StandardBoomerang : BoomerangMother {
 
 	public void Start () {
-		speed = 100;
+		speed = 300;
 		range = 3;
 		damage = 50;
-		rotationMultiplier = 1000;
+		rotationMultiplier = 2000;
 	}
 		
 }

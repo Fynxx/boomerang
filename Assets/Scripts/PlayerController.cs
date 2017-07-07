@@ -8,7 +8,7 @@ public class PlayerController : AvatarManager {
 
 	public BoomerangController bc;
 
-	public List<BoomerangController> boomerangInventory = new List<BoomerangController>();
+//	public List<BoomerangController> boomerangInventory = new List<BoomerangController>();
 
 	void Start () 
 	{
@@ -30,7 +30,6 @@ public class PlayerController : AvatarManager {
 			transform.Translate (0, verticalMove, 0);
 			transform.Translate (horizontalMove, 0, 0);
 		}
-
 	}
 
 	void OnTriggerEnter2D(Collider2D boomerang) {
@@ -38,14 +37,5 @@ public class PlayerController : AvatarManager {
 			bc.pickedUp = true;
 			bc.flying = false;
 		}
-
-	}
-
-//	void OnTriggerEnter2D(Collider2D treasure) {
-//		if (treasure.tag == "Treasure") {
-//			
-//		}
-//
-//	}
-		
+	}		
 }

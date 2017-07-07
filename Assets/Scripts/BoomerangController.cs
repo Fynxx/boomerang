@@ -43,8 +43,8 @@ public class BoomerangController : MonoBehaviour {
 		selectedBoomerang = boomerangs[0];
 		pickedUp = true;
 		zeroPercent = new Vector3 (0, 0, 0);
-		hundredPercent = new Vector3 (.5f, .5f, 1);
-		eightyPercent = new Vector3 (.4f, .4f, 1);
+		hundredPercent = new Vector3 (1, 1, 1);
+		eightyPercent = new Vector3 (.8f, .8f, 1);
 		boomerangCollider = boomerang.GetComponent<CircleCollider2D>();
 		//gob = new GameObject();
 //		tr = boomerang.GetComponent<TrailRenderer> ();
@@ -56,8 +56,9 @@ public class BoomerangController : MonoBehaviour {
 		CreateBoomerangPath ();
 		//NewReticle();
 		ReticleMouse();
-		SelectBoomerang ();
+//		SelectBoomerang ();
 		BoomerangInventory ();
+		ErrorChecks ();
 	}
 
 	void BoomerangInventory(){
@@ -143,8 +144,7 @@ public class BoomerangController : MonoBehaviour {
 			rotationDirection = Vector3.back;
 		}
 
-		float distance = Vector3.Distance (boomerangOrigin.transform.position, boomerangTarget.transform.position);
-		boomerang.transform.RotateAround(rotationPoint, rotationDirection, (selectedBoomerang.speed * Time.deltaTime) / (distance * .1f));
+		boomerang.transform.RotateAround(rotationPoint, rotationDirection, (selectedBoomerang.speed * Time.deltaTime));
 	}
 
 	void CalculatingCircleMiddle()
@@ -157,14 +157,14 @@ public class BoomerangController : MonoBehaviour {
 
 	}
 
-	void SelectBoomerang(){
-		if (Input.GetKeyDown(KeyCode.Alpha1)){
-			selectedBoomerang = boomerangs[0];
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha2)){
-			selectedBoomerang = boomerangs[1];
-		}
-	}
+//	void SelectBoomerang(){
+//		if (Input.GetKeyDown(KeyCode.Alpha1)){
+//			selectedBoomerang = boomerangs[0];
+//		}
+//		if (Input.GetKeyDown(KeyCode.Alpha2)){
+//			selectedBoomerang = boomerangs[1];
+//		}
+//	}
 
 	void ShowReticle(){
 		reticleVisible = !reticleVisible;
@@ -176,10 +176,7 @@ public class BoomerangController : MonoBehaviour {
 		}
 	}
 
-//	void OnTriggerEnter2D(Collider2D other) {
-//		if (other.tag == "Enemy") {
-//			print ("tag enemy");
-//			Destroy (other.gameObject);
-//		}
-//	}
+	void ErrorChecks(){
+		print ("boomerang speed " + selectedBoomerang.speed);
+	}
 }

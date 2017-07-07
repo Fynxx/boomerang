@@ -20,7 +20,12 @@ public class BoomerangMother : MonoBehaviour {
 
 	void Update(){
 		if (bc.flying == true) {
-			transform.Rotate(Vector3.forward * rotationMultiplier * Time.deltaTime);
+			if (bc.clockWise == true) {
+				transform.Rotate (Vector3.forward * rotationMultiplier * Time.deltaTime);
+			}
+			if (bc.clockWise == false) {
+				transform.Rotate (Vector3.back * rotationMultiplier * Time.deltaTime);
+			}
 		}
 	}
 }
