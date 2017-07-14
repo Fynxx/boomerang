@@ -46,16 +46,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Door.cs" />
+     <Compile Include="Assets\EnemyTower.cs" />
      <Compile Include="Assets\Scripts\AvatarManager.cs" />
      <Compile Include="Assets\Scripts\BoomerangController.cs" />
      <Compile Include="Assets\Scripts\BoomerangMother.cs" />
      <Compile Include="Assets\Scripts\BoomerangTrail.cs" />
+     <Compile Include="Assets\Scripts\Circle.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\FastBoomerang.cs" />
      <Compile Include="Assets\Scripts\Lamp.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\StandardBoomerang.cs" />
+     <Compile Include="Assets\SheepController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

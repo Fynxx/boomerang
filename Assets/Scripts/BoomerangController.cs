@@ -58,7 +58,7 @@ public class BoomerangController : MonoBehaviour {
 		ReticleMouse();
 //		SelectBoomerang ();
 		BoomerangInventory ();
-		ErrorChecks ();
+//		ErrorChecks ();
 	}
 
 	void BoomerangInventory(){
@@ -151,9 +151,9 @@ public class BoomerangController : MonoBehaviour {
 	{
 		rotationPoint = (boomerangTarget.transform.position + boomerangObject.transform.position) * 0.5f;
 		boomerangPath.transform.position = rotationPoint;
-		if (boomerangPath.transform.localScale.x <= selectedBoomerang.range) {
-			boomerangPath.transform.localScale += new Vector3(0.1f, 0.1f, 0);
-		}
+//		if (boomerangPath.transform.localScale.x <= selectedBoomerang.range) {
+//			boomerangPath.transform.localScale += new Vector3(0.1f, 0.1f, 0);
+//		}
 
 	}
 
